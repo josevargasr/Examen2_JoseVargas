@@ -1,0 +1,6 @@
+Jose Vargas;18;Masculino;0;
+
+Maria;22;Femenino;0;
+
+Oscar;25;Masculino;0;
+Marco;17;Masculino;0;
