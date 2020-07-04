@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import java.util.Random;
 import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
+import javax.swing.JLabel;
 import javax.swing.JList;
 
 public class administrarBarra extends Thread {
@@ -20,14 +21,16 @@ public class administrarBarra extends Thread {
     private JTable tabla;
     private JDialog ventana;
     private JList lista;
+    private JLabel parte;
 
-    public administrarBarra(JProgressBar barra, Orden_Ensamblaje o, JTable tabla, JDialog ventana, JList lista) {
+    public administrarBarra(JProgressBar barra, Orden_Ensamblaje o, JTable tabla, JDialog ventana, JList lista, JLabel parte) {
         this.barra = barra;
         vive = true;
         this.o = o;
         this.tabla = tabla;
         this.ventana = ventana;
         this.lista = lista;
+        this.parte = parte;
     }
 
     public boolean isVive() {
@@ -64,7 +67,7 @@ public class administrarBarra extends Thread {
 
     @Override
     public void run() {
-        int cont = 0;
+        parte.setText("Ensamblando Parte: RAM");
         while (vive) {
             DefaultTableModel m = (DefaultTableModel) tabla.getModel();
             for (int i = 0; i < 6; i++) {
@@ -98,27 +101,32 @@ public class administrarBarra extends Thread {
                 }
                 switch (i) {
                     case 0:
-                        Object[] row = {"Ram", o.getComputadora().getRam().getTiempo() + " segundos"};
+                        Object[] row = {o.getComputadora().getRam(), o.getComputadora().getRam().getTiempo() + " segundos"};
                         m.addRow(row);
+                        parte.setText("Ensamblando Parte: Disco Duro");
                         break;
                     case 1:
-                        Object[] row2 = {"Disco Duro", o.getComputadora().getDisco().getTiempo() + " segundos"};
+                        Object[] row2 = {o.getComputadora().getDisco(), o.getComputadora().getDisco().getTiempo() + " segundos"};
                         m.addRow(row2);
+                        parte.setText("Ensamblando Parte: Bateria");
                         break;
                     case 2:
-                        Object[] row3 = {"Bateria", o.getComputadora().getBateria().getTiempo() + " segundos"};
+                        Object[] row3 = {o.getComputadora().getBateria(), o.getComputadora().getBateria().getTiempo() + " segundos"};
                         m.addRow(row3);
+                        parte.setText("Ensamblando Parte: Teclado");
                         break;
                     case 3:
-                        Object[] row4 = {"Teclado", o.getComputadora().getTeclado().getTiempo() + " segundos"};
+                        Object[] row4 = {o.getComputadora().getTeclado(), o.getComputadora().getTeclado().getTiempo() + " segundos"};
                         m.addRow(row4);
+                        parte.setText("Ensamblando Parte: Pantalla");
                         break;
                     case 4:
-                        Object[] row5 = {"Pantalla", o.getComputadora().getPantalla().getTiempo() + " segundos"};
+                        Object[] row5 = {o.getComputadora().getPantalla(), o.getComputadora().getPantalla().getTiempo() + " segundos"};
                         m.addRow(row5);
+                        parte.setText("Ensamblando Parte: Procesador");
                         break;
                     case 5:
-                        Object[] row6 = {"Procesador", o.getComputadora().getProcesador().getTiempo() + " segundos"};
+                        Object[] row6 = {o.getComputadora().getProcesador(), o.getComputadora().getProcesador().getTiempo() + " segundos"};
                         m.addRow(row6);
                         break;
                 }
@@ -156,24 +164,25 @@ public class administrarBarra extends Thread {
         boolean valid = true;
         Random r = new Random();
         int comps = o.getTecnico().getCant_compus();
-        int posib = r.nextInt(10);
+        int posib = r.nextInt(100);
         if(comps <= 5){
-            if(posib<=3){
+            if(posib<=30){
                 valid = false;
             }
         }else if(comps <= 15){
-            if(posib<=2){
+            if(posib<=22){
                 valid = false;
             }
         }else if(comps <= 30){
-            if(posib<=1){
+            if(posib<=13){
                 valid = false;
             }
         }else{
-            if(posib<=1){
+            if(posib<=7){
                 valid = false;
             }
         }
+        JOptionPane.showMessageDialog(null, posib + " " + o.getTecnico().getCant_compus());
         return valid;
     }
 

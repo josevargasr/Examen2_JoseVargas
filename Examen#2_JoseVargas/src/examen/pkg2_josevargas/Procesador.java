@@ -40,7 +40,7 @@ public class Procesador extends Parte implements Serializable{
 
     @Override
     public String toString() {
-        return "Procesador{" + "nucleos=" + nucleos + ", velocidad=" + velocidad + '}';
+        return "Procesador{" + "Nucleos = " + nucleos + ", Velocidad = " + velocidad + '}';
     }
     
     

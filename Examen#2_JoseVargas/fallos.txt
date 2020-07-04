@@ -1,0 +1,2 @@
+Informe de Fallo:
+La computadora serie 200 falló al ser ensamblada por Jose Vargas

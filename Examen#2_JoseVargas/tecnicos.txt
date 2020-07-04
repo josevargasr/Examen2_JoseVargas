@@ -1,4 +1,5 @@
-Jose Vargas;18;Masculino;0;
+Jose Vargas;18;Masculino;4;
 
-Leo;21;Masculino;0;
-Maria;17;Femenino;0;
+Leo;21;Masculino;1;
+
+Maria;17;Femenino;1;

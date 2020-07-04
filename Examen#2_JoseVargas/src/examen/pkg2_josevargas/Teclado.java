@@ -41,7 +41,7 @@ public class Teclado extends Parte implements Serializable{
 
     @Override
     public String toString() {
-        return "Teclado{" + "material=" + material + ", color=" + color + '}';
+        return "Teclado{" + "Material = " + material + ", Color = " + color + '}';
     }
     
     

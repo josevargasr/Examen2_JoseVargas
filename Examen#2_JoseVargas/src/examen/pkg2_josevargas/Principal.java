@@ -128,7 +128,7 @@ public class Principal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jd_ensamblar = new javax.swing.JDialog();
         pb_hilo = new javax.swing.JProgressBar();
-        jLabel38 = new javax.swing.JLabel();
+        jl_parte = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         list_ce = new javax.swing.JList<>();
@@ -723,8 +723,8 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel38.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel38.setText("Ensamblando Parte: + Parte ");
+        jl_parte.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jl_parte.setText("Ensamblando Parte: + Parte ");
 
         javax.swing.GroupLayout jd_ensamblarLayout = new javax.swing.GroupLayout(jd_ensamblar.getContentPane());
         jd_ensamblar.getContentPane().setLayout(jd_ensamblarLayout);
@@ -736,14 +736,14 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(64, 64, 64))
             .addGroup(jd_ensamblarLayout.createSequentialGroup()
                 .addGap(158, 158, 158)
-                .addComponent(jLabel38)
+                .addComponent(jl_parte)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jd_ensamblarLayout.setVerticalGroup(
             jd_ensamblarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_ensamblarLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jLabel38)
+                .addComponent(jl_parte)
                 .addGap(31, 31, 31)
                 .addComponent(pb_hilo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(82, Short.MAX_VALUE))
@@ -981,7 +981,7 @@ public class Principal extends javax.swing.JFrame {
         Computadora temp = (Computadora) cb_compus.getSelectedItem();
         Tecnico temp2 = (Tecnico) cb_tecnicos.getSelectedItem();
         Orden_Ensamblaje o = new Orden_Ensamblaje(temp, temp2);
-        ab=new administrarBarra(pb_hilo, o, jt_tabla, jd_ensamblar, list_ce);
+        ab=new administrarBarra(pb_hilo, o, jt_tabla, jd_ensamblar, list_ce, jl_parte);
         ab.start();
         
     }//GEN-LAST:event_jButton2MouseClicked
@@ -1067,7 +1067,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1097,6 +1096,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_crearo;
     private javax.swing.JDialog jd_creart;
     private javax.swing.JDialog jd_ensamblar;
+    private javax.swing.JLabel jl_parte;
     private javax.swing.JTable jt_tabla;
     private javax.swing.JList<String> list_ce;
     private javax.swing.JList<String> list_t;

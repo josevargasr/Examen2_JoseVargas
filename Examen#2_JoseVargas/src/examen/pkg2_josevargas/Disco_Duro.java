@@ -40,6 +40,6 @@ public class Disco_Duro extends Parte implements Serializable{
 
     @Override
     public String toString() {
-        return "Ram{" + "tamaño=" + tamaño + ", marca=" + marca + '}';
+        return "Disco{" + "Tamaño = " + tamaño + ", Marca = " + marca + '}';
     }
 }

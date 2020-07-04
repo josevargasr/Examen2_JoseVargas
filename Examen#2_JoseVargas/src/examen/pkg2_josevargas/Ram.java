@@ -40,7 +40,7 @@ public class Ram extends Parte implements Serializable{
 
     @Override
     public String toString() {
-        return "Ram{" + "tama\u00f1o=" + tamaño + ", marca=" + marca + '}';
+        return "Ram{" + "Tamaño = " + tamaño + ", Marca = " + marca + '}';
     }
     
     

@@ -40,7 +40,7 @@ public class Bateria extends Parte implements Serializable{
 
     @Override
     public String toString() {
-        return "Bateria{" + "capacidad=" + capacidad + ", material=" + material + '}';
+        return "Bateria{" + "Capacidad = " + capacidad + ", Material = " + material + '}';
     }
     
      
