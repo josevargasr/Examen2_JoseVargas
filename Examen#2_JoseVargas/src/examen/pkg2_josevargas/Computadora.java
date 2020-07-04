@@ -120,7 +120,7 @@ public class Computadora implements Serializable{
 
     @Override
     public String toString() {
-        return "Computadora Serie: " + serie;
+        return "Serie: " + serie;
     }
     
     
