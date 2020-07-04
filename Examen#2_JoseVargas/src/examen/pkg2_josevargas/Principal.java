@@ -129,6 +129,12 @@ public class Principal extends javax.swing.JFrame {
         jd_ensamblar = new javax.swing.JDialog();
         pb_hilo = new javax.swing.JProgressBar();
         jl_parte = new javax.swing.JLabel();
+        jd_elimt = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        cb_generot1 = new javax.swing.JComboBox<>();
+        jButton5 = new javax.swing.JButton();
+        bgroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         list_ce = new javax.swing.JList<>();
@@ -308,9 +314,11 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        bgroup.add(rb_tacsi);
         rb_tacsi.setSelected(true);
         rb_tacsi.setText("Si");
 
+        bgroup.add(rb_tacno);
         rb_tacno.setText("No");
 
         jButton4.setText("Agregar");
@@ -749,6 +757,56 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(82, Short.MAX_VALUE))
         );
 
+        jLabel38.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel38.setText("Eliminar Técnico");
+
+        jButton5.setText("Eliminar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addComponent(jLabel38)
+                .addContainerGap(152, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cb_generot1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel38)
+                .addGap(18, 18, 18)
+                .addComponent(cb_generot1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jd_elimtLayout = new javax.swing.GroupLayout(jd_elimt.getContentPane());
+        jd_elimt.getContentPane().setLayout(jd_elimtLayout);
+        jd_elimtLayout.setHorizontalGroup(
+            jd_elimtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_elimtLayout.setVerticalGroup(
+            jd_elimtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         list_ce.setModel(new DefaultListModel());
@@ -993,6 +1051,10 @@ public class Principal extends javax.swing.JFrame {
         jt_tabla.setModel(dtm);
     }//GEN-LAST:event_jButton3MouseClicked
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1029,13 +1091,16 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgroup;
     private javax.swing.JComboBox<String> cb_compus;
     private javax.swing.JComboBox<String> cb_generot;
+    private javax.swing.JComboBox<String> cb_generot1;
     private javax.swing.JComboBox<String> cb_tecnicos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1067,6 +1132,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1087,6 +1153,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1095,6 +1162,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_crearc;
     private javax.swing.JDialog jd_crearo;
     private javax.swing.JDialog jd_creart;
+    private javax.swing.JDialog jd_elimt;
     private javax.swing.JDialog jd_ensamblar;
     private javax.swing.JLabel jl_parte;
     private javax.swing.JTable jt_tabla;
